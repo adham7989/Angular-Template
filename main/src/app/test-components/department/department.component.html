@@ -1,0 +1,6 @@
+<h3>Department List </h3>
+<ul class="items" style="list-style-type: none;">
+    <li *ngFor="let dept of departments" (click)="onSelect(dept)">
+        <span >{{dept.id}} </span>{{dept.course}}
+    </li>
+</ul>

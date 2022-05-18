@@ -1,0 +1,50 @@
+<div class="container">
+    <h2>parent works!</h2>
+
+<hr>
+<!-- using Input  -->
+<h3 style="color: brown; text-transform: capitalize;">1- using @input decorator </h3>
+<app-child #ref [userName]="name" [loggedInSetter]="userLoggedIn" (newItemEvent)="addNewItem($event)" ></app-child>
+
+<hr>
+<h3 style="color: brown; text-transform: capitalize;">2- using setters & getters  </h3>
+    
+<button class="btn btn-danger" (click)="userLoggedIn=true" style="margin-right: 20px;">login</button>
+<button class="btn btn-danger" (click)="userLoggedIn=false">logout</button>
+
+<hr>
+
+<h3 style="color: brown; text-transform: capitalize;">3- using @output decorator </h3>
+    <ul>
+        <li *ngFor="let item of items">{{item}}</li>
+    </ul>
+
+
+    <hr>
+    <h3 style="color: brown; text-transform: capitalize;">4- using template refrence </h3>
+    <h6> access method&property in the child using template Refrence :- 
+        {{ref.age}}</h6>
+    
+      
+        <hr>
+    
+        <h3 style="color: brown; text-transform: capitalize;">5- @viewchild decorator   </h3>
+    
+        <div>
+            <input type="text" [(ngModel)]="fname" class="form-control" #nameRef>
+            <p >Welcome {{ fname }}</p>
+        </div>
+
+        
+        <div>
+            <input type="text" [ngModel]="userName" class="form-control" >
+            <p>Welcome {{ userName}}</p>
+        </div>
+
+        
+        <div>
+            <input type="text" [(ngModel)]="customerName" class="form-control">
+            <p>Welcome {{ customerName }}</p>
+        </div>
+
+</div>

@@ -1,0 +1,93 @@
+
+
+
+<!-- Header -->
+<div class="header">
+<div class="container">
+<div class="logo">
+<a href="#" routerLink="/home"> <img src="../../assets/images/logo-alt.webp" alt="logo-image" draggable="false"></a>
+</div>
+
+<ul class="nav">
+    <li><a href="#" routerLink="/protofolio">protoflio</a></li>
+    <li><a href="#" routerLink="/service">service</a></li>
+    <li><a href="#" routerLink="/blog">blog</a></li>
+    <li><a href="#" routerLink="/team">team</a></li>
+    <li><a href="#" routerLink="/about">about</a></li>
+    <li><a href="#" routerLink="/price">price</a></li>
+    <li><a href="#" routerLink="/contact">contact</a></li>
+    <li ><a href="#" routerLink="/signin">sign-in</a></li>
+    <li ><a href="#" routerLink="/signup">sign-up</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+</div> 
+
+ <!-- reactive form 
+ Home Section  -->
+ <div class="home">
+    <div class="overlay">
+        <div class="home-content"> 
+
+        <!-- {{registrationForm.value | json}} -->
+
+            <form [formGroup]="registrationForm" (ngSubmit)="submitData()"  >
+                <h2> User registration</h2> 
+
+            
+            
+                <!-- using ngIF -->
+            
+                <label for="firstname" class="form-label">First-Name</label>
+                <input type="text" placeholder="enter firstname" class="form-control" formControlName="firstName" [class.is-valid]="getFirstName.valid" [class.is-invalid]="getFirstName.invalid">
+
+                <!-- <span  *ngIf="registrationForm.get('firstName').valid && registrationForm.get('firstName').touched">provide the firstName</span><br> -->
+                <span *ngIf="getFirstName.invalid " class="text-danger">firstName is required</span><br>
+
+
+                <label for="lastname" class="label-control">Last-Name</label>
+                <input type="text" placeholder="enter lastname" class="form-control" formControlName="lastName" [class.is-valid]="getLastName.valid" [class.is-invalid]="getLastName.invalid"   >
+                <span *ngIf="getLastName.invalid" class="text-danger">lastName is required</span><br>
+
+
+                <label for="email">email</label>
+                <input type="email" placeholder="enter email" class="form-control" formControlName="email" [class.is-valid]="getEmail.valid" [class.is-invalid]="getEmail.invalid" [class.is-invalid]="getEmail.invalid" >
+                <span *ngIf="getEmail.invalid" class="text-danger">
+                    <span *ngIf="getEmail.errors?.['required']">email is required</span>
+                    <span *ngIf="getEmail.hasError('email')">pattern of email  should respected </span>
+                </span><br>
+
+                <label for="password">password</label>
+                <input type="password" placeholder="enter password" class="form-control" formControlName="password" [class.is-valid]="getPassword.valid" [class.is-invalid]="getPassword.invalid"> 
+                <span *ngIf="getPassword.invalid" class="text-danger">password is required</span><br>
+
+                <button type="submit"   class="btn btn-danger"  id="submit" >Submit</button>
+
+                <button type="button" class="btn btn-secondary mt-2" id="submit" (click)="resetData()">Reset Data</button>
+
+    </form>    
+
+</div>
+</div> 
+</div> 
+<!-- form-value :- {{registrationForm.value |json}}
+form-status :- {{registrationForm.valid | json}} -->
+
+
+
+
+<!-- footer -->
+<div class="footer ">
+<img src="../../assets/images/logo-alt.webp">
+<ul class="footer-links">
+<li><a href="http://www.facebook.com" target="_blank" class="hover-opacity"><i class="fa fa-facebook-square "></i></a></li>
+<li><a href="http://www.twitter.com" target="_blank" class="hover-opacity"><i class="fa fa-twitter"></i> </a></li>
+<li><a href="http://www.youtube.com" target="_blank" class="hover-opacity"><i class="fa fa-youtube"></i></a></li>
+<li><a href="http://www.linkiden.com" target="_blank" class="hover-opacity"><i class="fa fa-linkedin"></i></a></li>
+<li><a href="http://www.instagram.com" target="_blank" class="hover-opacity"><i class="fa fa-instagram"></i></a></li>
+<li><a href="http://www.whatsapp.com" target="_blank" class="hover-opacity"><i class="fa fa-whatsapp"></i></a></li>
+</ul>
+</div>
+
+
+

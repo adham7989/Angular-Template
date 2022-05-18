@@ -1,0 +1,32 @@
+<h2 style="text-align: center; color: brown;">way of Binding </h2>
+
+<div>
+    <h3>1-interpolation</h3>
+    <p>{{data}}</p>
+</div>
+
+
+<div>
+    <h2>2-property binding</h2>
+    <img [src]="imgUrl" alt="image">
+</div>
+
+<br>
+
+<div>
+    <h3>3-event binding</h3>
+    <button (click)="increament()">click</button>
+    <p>clicked {{counter}} times </p>
+</div>
+
+
+<div>
+    <h2>4-Two Way binding</h2>
+    <input type="text" [(ngModel)]="name" >
+    <p>welcome {{name}}</p>
+
+    <h3>using getters & setters</h3>
+    <input type="text" [(ngModel)]="customerName" >
+    <p>welcome {{ customerName }}</p>
+
+</div>

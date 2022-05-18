@@ -1,0 +1,64 @@
+
+form {
+    margin: -15% auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px ;
+    color: tomato;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+
+
+form input {
+    width: 50%;
+    margin: 10px  auto;
+    /* border-radius: 30px; */
+}
+
+form button{
+display: block;
+margin: auto;
+transition: padding 1s;
+
+}
+
+form button:hover{
+    background-color: tomato;
+    padding: 20px;
+}
+
+input.ng-valid{
+    border-left: 5px solid green;
+}
+
+
+input.ng-invalid{
+    border-left: 5px solid red
+}
+
+#submit{
+    width: 20%;
+    border-radius: 50px;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* customize footer section */
+
+ .footer {
+    background-color: darkcyan;
+}

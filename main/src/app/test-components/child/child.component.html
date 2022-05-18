@@ -1,0 +1,20 @@
+<div class="container">
+    <h5>child works!</h5>
+<h3>{{userName}}</h3>
+
+<!-- <button class="btn btn-success" (click)="sendToParent()"></button>  -->
+
+
+
+<label for="item-input"> add an item : </label>
+<input type="text" id="item-input" class="form-control" #newItem><br>
+<button class="btn btn-danger" (click)="addNewItem(newItem.value)">add to parent list</button>
+
+<hr>
+
+
+
+{{message}}
+
+
+</div>

@@ -1,0 +1,24 @@
+
+<h1 style="color: green; text-align: center;">Pipes</h1>
+
+<h1 style="color: green; text-align: center;"> 1-String Pipes</h1>
+
+<h2> 1-  {{name | uppercase}} (to upper case) </h2>
+<h2> 2- {{name | lowercase}}  (to upper case) </h2>
+<h2> 3- {{name | slice:2:4}} (slice from index 2 to 4 ) </h2>
+
+
+<h1 style="color: green; text-align: center;"> 2-currency Pipes</h1>
+
+<h2>{{ 8.567 | currency:'USD'}}</h2>
+<h2>{{8.567 | currency :'GBP'}}</h2> 
+
+<h1 style="color: green; text-align: center;"> 3-Data Pipes</h1>
+
+<h2> 1- Date without pipe  :- {{date}}</h2>
+<h2> 2- Date with pipe :- {{date | date}} </h2>
+<h2> 3- Date with fullDate :-{{date | date:'fullDate'}}</h2>
+<h2> 4- Date with shortDate :-  {{date | date:'shortDate'}}</h2>
+<h2> 5- Date with meduimDate :- {{date | date:'meduimDate'}}</h2>
+<h2> 6- Date with shortTime :- {{date | date:'shortTime'}}</h2>
+<h2> 7- Date with fullTime :- {{date | date:'fullTime'}}</h2>

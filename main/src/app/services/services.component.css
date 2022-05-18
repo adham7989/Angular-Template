@@ -1,0 +1,77 @@
+/* hader  */
+
+
+
+.header{
+    background : linear-gradient(to right , rgb(189, 92, 92) , rgb(98, 87, 87));
+}
+
+.header .nav li a:hover{
+    color: black;
+}
+
+.section-header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 100px 0 50px 0;
+
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+/* service  */
+
+
+.services {
+
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-gap: 40px;
+    /* margin-top: 500px; */
+
+
+}
+
+.services .serviceItem{
+    width: 50%;
+    border: 1px solid gainsboro;
+    line-height: 2;
+    padding: 30px;
+    position: relative;
+    margin-left: 20%;
+    border-radius: 20%;
+}
+
+.serviceItem i {
+    font-size: 30px;
+    color: royalblue;
+    position: absolute;
+    left: 0;
+    top: 10;
+    transform: translate(50% , 50%);
+}
+
+.serviceItem h2 {
+
+    padding-left: 40px;
+    color: saddlebrown;
+
+}
+
+.serviceItem:hover h2 , 
+.serviceItem:hover p{
+    color: aliceblue;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* customize  footer section */
+
+.footer {
+    background-color: darkcyan;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+

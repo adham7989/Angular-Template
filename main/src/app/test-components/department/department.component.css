@@ -1,0 +1,18 @@
+li{
+    background-color: lightgray;
+    width: 200px;
+    margin: 5px;
+    padding: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+li span{
+    background-color: brown;
+    color: aliceblue;
+    /* position: absolute; */
+    height: 70px;
+    padding: 10px;
+    margin-right: 10px;
+}

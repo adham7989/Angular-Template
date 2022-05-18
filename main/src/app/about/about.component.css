@@ -1,0 +1,80 @@
+
+/* section header */
+
+ .line{
+    background-color: #fff;
+    width: 120px;
+    height: 2px;
+    transition: width 1s;
+}
+
+.section-header .section-title{
+    word-spacing: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.section-header:hover .line{
+    width: 150px;
+    background-color: blueviolet;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+/* about item  */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.about .about-item{
+
+    width: 100%;
+    margin: 0 20px ;
+    transition: transform 2s;
+}
+
+
+.about-item .item-header{
+    font-size: 30px;
+    margin-top: 30px;
+    font-family: cursive;
+    text-transform: lowercase;
+}
+
+.about-item .img-item img{
+    width: 50%;
+    opacity: 0.8;
+}
+
+
+.about-item p{
+    line-height: 2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+.about-item:hover{
+    transform: scale(1.2);
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+
+/* customize footer section */
+
+ .footer { 
+    background-color: darkcyan;
+} 
+
+
+
+

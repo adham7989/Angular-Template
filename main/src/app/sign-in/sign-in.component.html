@@ -1,0 +1,83 @@
+
+<!-- Header -->
+<div class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="#" routerLink="/home"> <img src="../../assets/images/logo-alt.webp" alt="logo-image" draggable="false"></a>
+        </div>
+
+        <ul class="nav">
+            <li><a href="#" routerLink="/protofolio">protoflio</a></li>
+            <li><a href="#" routerLink="/service">service</a></li>
+            <li><a href="#" routerLink="/blog">blog</a></li>
+            <li><a href="#" routerLink="/team">team</a></li>
+            <li><a href="#" routerLink="/about">about</a></li>
+            <li><a href="#" routerLink="/price">price</a></li>
+            <li><a href="#" routerLink="/contact">contact</a></li>
+            <li ><a href="#" routerLink="/signin">sign-in</a></li>
+            <li ><a href="#" routerLink="/signup">sign-up</a></li>
+        </ul>
+        <div class="clear"></div>
+    </div><!--/container-->
+</div><!--/header--> 
+
+<!-- template-driven-for :- used template-refrence-varible  -->
+
+    <!-- Home Section  -->
+
+    <div class="home">
+    <div class="overlay">
+        <div class="home-content">
+
+
+            <!-- display data form current input-->
+            <!-- {{userForm.value | json}}<br> -->
+                <!--ngModel-->
+                <!-- //------------------------------------------------------- -->
+
+            
+            <!-- ngForm  :- is a directive which give us access to the formControl values -->
+            <form #userForm="ngForm" (ngSubmit)="submitData()"  novalidate>
+                <h2> User log-in</h2>
+
+                <!-- valid :- {{email.valid}} <br> -->
+
+               <div>
+                <label for="email">email</label>
+                <input type="text" placeholder="enter email" name="email" [(ngModel)]="mail"  #email="ngModel"
+                 class="form-control" [class.is-invalid]="email.invalid" [class.is-valid]="email.valid"  required ><br>
+                <p [hidden]="email.valid " style="color:#DABC86 ;">email required</p>
+               </div>
+
+                <label for="password">password</label>
+                <input type="password" placeholder="enter password" name="password" [(ngModel)]="password" #pass="ngModel"
+                 class="form-control" [class.is-invalid]="pass.invalid" [class.is-valid]="pass.valid" pattern=".{8,}"  required><br>
+
+                    <div *ngIf="pass.invalid " style="color: #DABC86;" >
+                        <div *ngIf="pass.errors?.['required']">  password is required. </div>
+                        <div *ngIf="pass.hasError('pattern')">  pass should be at least 8 digits. </div>
+                    </div> <br>
+
+                <button [disabled]="userForm.invalid" type="submit" id="submit" class="btn" >Submit</button>
+                <button  type="button" class="btn btn-secondary mt-2" (click)="resetData()">Reset Data</button>
+                        
+            </form>
+        </div><!--/ home-contnet -->
+
+    </div> <!--/ overlay-->
+</div> <!--/ home-->
+
+
+
+<!-- footer -->
+<div class="footer ">
+<img src="../../assets/images/logo-alt.webp">
+<ul class="footer-links">
+    <li><a href="http://www.facebook.com" target="_blank" class="hover-opacity"><i class="fa fa-facebook-square "></i></a></li>
+    <li><a href="http://www.twitter.com" target="_blank" class="hover-opacity"><i class="fa fa-twitter"></i> </a></li>
+    <li><a href="http://www.youtube.com" target="_blank" class="hover-opacity"><i class="fa fa-youtube"></i></a></li>
+    <li><a href="http://www.linkiden.com" target="_blank" class="hover-opacity"><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="http://www.instagram.com" target="_blank" class="hover-opacity"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="http://www.whatsapp.com" target="_blank" class="hover-opacity"><i class="fa fa-whatsapp"></i></a></li>
+</ul><!--/fotwitwhatsapp-->
+</div><!--/footer-->
